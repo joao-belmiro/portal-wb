@@ -1,0 +1,10 @@
+<template>
+  <div>
+    <Header></Header>
+    <Home></Home>
+    <Presentation></Presentation>
+    <Proposit></Proposit>
+    <Segments/>
+    <Footer></Footer>
+  </div>
+</template>
