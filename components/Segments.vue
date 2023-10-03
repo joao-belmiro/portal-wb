@@ -1,32 +1,11 @@
 <template>
   <div id="proposito">
-    <h2>Nosso propósito</h2>
+    <h2>Nosso Segmentos</h2>
     <div class="p-wrapper">
-      <div class="p-card">
-        <img src="@/assets/images/notebook.svg" alt="" />
+      <div v-for="card in list" :key="card.title" class="p-card">
+        <h4 class="text-primary">{{ card.title }}</h4>
         <span>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </span>
-      </div>
-      <div class="p-card">
-        <img src="@/assets/images/growth.svg" alt="" />
-        <span>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </span>
-      </div>
-      <div class="p-card">
-        <img src="@/assets/images/growth.svg" alt="" />
-        <span>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          {{ card.description }}
         </span>
       </div>
     </div>
@@ -34,7 +13,44 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      list: [
+        {
+          title: "Criação de Sites Profissionais",
+          description:
+            "Transforme sua ideia em um site incrível! Desenvolvemos sites personalizados que destacam sua marca online.",
+        },
+        {
+          title: "Criação de Blogs Cativantes",
+          description:
+            "Conteúdo de qualidade é o segredo para o sucesso online. Deixe-nos criar um blog que envolva e informe seu público.",
+        },
+        {
+          title: "Landing Pages de Alta Conversão",
+          description:
+            "Capture leads e converta visitantes em clientes com nossas landing pages de alta conversão. Resultados garantidos!",
+        },
+        {
+          title: "Consultoria Especializada",
+          description:
+            "Alcance seus objetivos online com nossa consultoria especializada. Vamos criar uma estratégia personalizada para o seu negócio.",
+        },
+        {
+          title: "SEO Estratégico para Dominar a Web",
+          description:
+            "Suba nos rankings de busca e alcance mais clientes. Nosso SEO estratégico coloca você no topo do jogo.",
+        },
+        {
+          title: "Criação de sistemas pernonalizados",
+          description:
+            "Potencialize seu negócio com sistemas personalizados que se encaixam perfeitamente às suas necessidades. Transforme sua visão em realidade agora",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -46,21 +62,26 @@ export default {};
     margin: 32px 0;
   }
   .p-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @media (max-width: 999px) {
+          grid-template-columns: 1fr;
+
+    }
     .p-card {
-      width: 30%;
       border-radius: 16px;
       padding: 16px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+      @media (max-width: 999px) {
+        width: auto;
+        margin-bottom: 16px;
+      }
       img {
         width: 150px;
         height: 150px;

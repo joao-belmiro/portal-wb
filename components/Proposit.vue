@@ -1,6 +1,6 @@
 <template>
   <div class="p-container">
-    <h2>O que queremos</h2>
+    <h2>Propósito</h2>
     <div class="p-list">
       <ul>
         <li>Alcance global</li>
@@ -53,6 +53,7 @@ export default {};
         margin-bottom: 12px;
         @media (max-width: 700px) {
           margin-left: 30px;
+          font-size: 16px;
         }
       }
     }
