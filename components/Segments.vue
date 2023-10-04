@@ -3,7 +3,7 @@
     <h2>Nosso Segmentos</h2>
     <div class="p-wrapper">
       <div v-for="card in list" :key="card.title" class="p-card">
-        <h4 class="text-primary">{{ card.title }}</h4>
+        <h4 class="text-primary mb-2">{{ card.title }}</h4>
         <span>
           {{ card.description }}
         </span>
@@ -38,7 +38,7 @@ export default {
             "Alcance seus objetivos online com nossa consultoria especializada. Vamos criar uma estratégia personalizada para o seu negócio.",
         },
         {
-          title: "SEO Estratégico para Dominar a Web",
+          title: "SEO Estratégico",
           description:
             "Suba nos rankings de busca e alcance mais clientes. Nosso SEO estratégico coloca você no topo do jogo.",
         },
@@ -66,8 +66,7 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     @media (max-width: 999px) {
-          grid-template-columns: 1fr;
-
+      grid-template-columns: 1fr;
     }
     .p-card {
       border-radius: 16px;
@@ -82,11 +81,18 @@ export default {
         width: auto;
         margin-bottom: 16px;
       }
-      img {
-        width: 150px;
-        height: 150px;
+      h4 {
+        text-align: center;
+      }
+      span {
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 2;
       }
     }
+  }
+  @media (max-width: 999px) {
+    width: 90%;
   }
 }
 </style>

@@ -29,8 +29,8 @@ export default {};
   color: $dark;
   @media (max-width: 999px) {
     padding-top: 14px;
-    line-height: 1;
     font-size: 14px;
+    width: 90%;
   }
   span {
     width: 80%;

@@ -58,5 +58,8 @@ export default {};
       }
     }
   }
+  @media (max-width: 999px) {
+    width: 90%;
+  }
 }
 </style>

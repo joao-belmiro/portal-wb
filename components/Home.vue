@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <div class="d-copy">
-      <h1>Comece a Construir Agora !</h1>
+      <h1>Comece a construir Agora !</h1>
       <h2>Contrua a sua presença online com a gente</h2>
     </div>
   </div>
