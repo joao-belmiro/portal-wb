@@ -5,6 +5,7 @@
     <Presentation></Presentation>
     <Proposit></Proposit>
     <Segments/>
+    <Contact-form/>
     <Footer></Footer>
   </div>
 </template>
