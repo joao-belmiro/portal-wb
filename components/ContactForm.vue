@@ -38,10 +38,11 @@
         <textarea
           id="descricao"
           v-model="formData.descricao"
-          rows="4"
+          rows="6"
           @focus="inputFocus"
           @blur="inputBlur"
         ></textarea>
+        <p style="text-align:right;">0/ <span id="charCount">{{formData.descricao.length}}</span></p>
       </div>
       <button type="submit">Enviar</button>
     </form>
@@ -106,11 +107,11 @@ export default {
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      transition: border-color 0.3s;
       flex: 1;
 
-      &:focus {
-        border-color: $primary; /* Substitua $primary pela sua variável de cor */
+      &:focus-within {
+        outline: none;
+        border: 1px solid $secondary; /* Substitua $primary pela sua variável de cor */
       }
     }
 
