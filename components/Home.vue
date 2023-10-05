@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <div class="d-copy">
-      <h1>Comece a construir Agora !</h1>
+      <h1 class="text">Comece a construir Agora !</h1>
       <h2>Contrua a sua presença online com a gente</h2>
     </div>
   </div>
@@ -33,6 +33,15 @@ export default {};
   .d-copy {
     color: $background;
     animation: bounce 4s infinite;
+    .text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 12px solid $secondary; /* Simula um cursor preto */
+      animation: typing 4s steps(30) forwards, blink 0.7s infinite alternate;
+    }
+
+   
     h1 {
       letter-spacing: 3px;
       font-size: 48px;
