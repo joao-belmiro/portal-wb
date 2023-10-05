@@ -43,7 +43,7 @@ export default {
             "Suba nos rankings de busca e alcance mais clientes. Nosso SEO estratégico coloca você no topo do jogo.",
         },
         {
-          title: "Criação de sistemas pernonalizados",
+          title: "Criação de sistemas personalizados",
           description:
             "Potencialize seu negócio com sistemas personalizados que se encaixam perfeitamente às suas necessidades. Transforme sua visão em realidade agora",
         },
