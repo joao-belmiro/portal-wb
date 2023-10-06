@@ -57,14 +57,13 @@ export default {};
           0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
         position: relative;
         text-align: start;
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 24px;
-        padding: 12px;
-        border-radius: 32px;
+        padding: 12px 32px;
+        border-radius: 16px;
         border: 1px solid #ddd;
         @media (max-width: 700px) {
-          margin-left: 30px;
-          font-size: 26px;
+          font-size: 14px;
         }
         &::before {
           padding: 4px 8px;
