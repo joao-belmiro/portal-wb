@@ -69,17 +69,16 @@ export default {
       grid-template-columns: 1fr;
     }
     .p-card {
-      border-radius: 16px;
+      background: #fff;
+      border-radius: 36px;
       padding: 16px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
       border: 1px solid #ddd;
       @media (max-width: 999px) {
         width: auto;
-        margin-bottom: 16px;
       }
       h4 {
         text-align: center;

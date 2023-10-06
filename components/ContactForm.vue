@@ -1,48 +1,54 @@
 <template>
   <div class="contact-form">
-    <h2 class="text-primary">
-      Entre em Contato conosco</h2>
+    <h2 class="text-primary">Envie sua mensagem</h2>
     <form @submit.prevent="submitForm">
       <div class="form-group">
-        <label for="nome">Nome:</label>
+        <label for="nome">Nome</label>
         <input
           type="text"
           id="nome"
           v-model="formData.nome"
           @focus="inputFocus"
           @blur="inputBlur"
+          required
         />
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
+        <label for="email">Seu melhor e-mail</label>
         <input
           type="email"
           id="email"
           v-model="formData.email"
           @focus="inputFocus"
           @blur="inputBlur"
+          required
         />
       </div>
       <div class="form-group">
-        <label for="telefone">Telefone:</label>
+        <label for="telefone">Whatsapp</label>
         <input
           type="tel"
           id="telefone"
           v-model="formData.telefone"
           @focus="inputFocus"
           @blur="inputBlur"
+          required
         />
       </div>
       <div class="form-group">
-        <label for="descricao">Descrição:</label>
+        <label for="descricao">Mensagem</label>
         <textarea
           id="descricao"
           v-model="formData.descricao"
           rows="6"
+          
           @focus="inputFocus"
           @blur="inputBlur"
+          required
         ></textarea>
-        <p style="text-align:right;">0/ <span id="charCount">{{formData.descricao.length}}</span></p>
+        <p class="count">
+        <span id="charCount">{{ formData.descricao.length }}</span>
+        </p>
       </div>
       <button type="submit">Enviar</button>
     </form>
@@ -65,7 +71,7 @@ export default {
   methods: {
     submitForm() {
       // Lógica para enviar o formulário
-      console.log("Dados do formulário:", this.formData);
+      console.table(this.formData);
       // Aqui você pode enviar os dados do formulário para o servidor ou executar qualquer outra ação necessária
     },
     inputFocus() {
@@ -80,15 +86,18 @@ export default {
 
 <style scoped lang="scss">
 .contact-form {
-  max-width: 70%;
+  max-width: 60%;
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-
+  @media (max-width: 999px) {
+    max-width: 90%;
+  }
   h2 {
     font-size: 1.5rem;
+    text-align: center;
     margin-bottom: 20px;
   }
 
@@ -105,13 +114,11 @@ export default {
     input,
     textarea {
       padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      border: none;
       flex: 1;
-
+      border-bottom: 3px solid $secondary;
       &:focus-within {
         outline: none;
-        border: 1px solid $secondary; /* Substitua $primary pela sua variável de cor */
       }
     }
 
@@ -130,13 +137,21 @@ export default {
   }
 
   button {
-    background-color: $primary; /* Substitua $primary pela sua variável de cor */
+    background-color: $primary;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     align-self: flex-start;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .count {
+    text-align: right;
+    font-size: 12px;
+    color: $grey-1 !important;
   }
 }
 </style>
