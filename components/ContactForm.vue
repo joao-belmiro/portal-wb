@@ -117,6 +117,8 @@ export default {
       border: none;
       flex: 1;
       border-bottom: 3px solid $secondary;
+      border-radius: 8px 8px 0 0;
+
       &:focus-within {
         outline: none;
       }

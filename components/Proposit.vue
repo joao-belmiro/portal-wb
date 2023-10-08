@@ -61,17 +61,19 @@ export default {};
         margin-bottom: 24px;
         padding: 12px 32px;
         border-radius: 16px;
-        border: 1px solid #ddd;
+        background: radial-gradient(circle, rgba(6,74,106,1) 37%, rgba(0,51,102,1) 100%);
+        color: $background;
         @media (max-width: 700px) {
           font-size: 14px;
         }
         &::before {
-          padding: 4px 8px;
-          background: #add8e6;
+          padding: 6px 8px;
+          background: linear-gradient(90deg, rgba(46,50,52,1) 6%, rgba(0,51,102,1) 100%);
           border-radius: 1rem 1rem 0 1rem;
           position: absolute;
-          left: -24px;
-          top: -20px;
+          left: -16px;
+          top: -8px;
+          line-height: 1;
           content: url("@/assets/images/check-circle.svg");
         }
       }
